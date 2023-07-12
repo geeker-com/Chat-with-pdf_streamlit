@@ -42,7 +42,7 @@ def get_conversation_chain(vectorstore):
 
     # llm = HuggingFaceHub(repo_id="google/flan-t5-small", model_kwargs={"temperature":0.5, "height":128 , "width":128,"max_seq_length":512})
     
-    llm = HuggingFaceHub(repo_id="tiiuae/falcon-7b-instruct", model_kwargs={"temperature":0.5, "height":128 , "width":128,"max_seq_length":512})
+    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5,"max_length":512})
 
     memory = ConversationBufferMemory(
         memory_key='chat_history', return_messages=True)
